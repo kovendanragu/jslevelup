@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Hotel</title>
+</head>
+
+<body>
+    <h1>Welcome!!</h1>
+    <ul id="menu">
+        <!-- <li>Margherita Pizza</li>
+        <li>Spaghetti Carbonara</li>
+        <li>Fettuccine Alfredo</li>
+        <li>Lasagna</li>
+        <li>Penne Arrabbiata</li>
+        <li>Chicken Parmigiana</li>
+        <li>Minestrone Soup</li>
+        <li>Ravioli al Formaggio</li>
+        <li>Bolognese Sauce</li>
+        <li>Caprese Salad</li> -->
+    </ul>
+    <script>
+        // alert("hello from javasript")
+        const italianDishes = [
+            { name: "Margherita Pizza", vegetarian: true },
+            { name: "Spaghetti Carbonara", vegetarian: false },
+            { name: "Fettuccine Alfredo", vegetarian: true },
+            { name: "Lasagna", vegetarian: false },
+            { name: "Penne Arrabbiata", vegetarian: true },
+            { name: "Chicken Parmigiana", vegetarian: false },
+            { name: "Minestrone Soup", vegetarian: true },
+            { name: "Ravioli al Formaggio", vegetarian: true },
+            { name: "Bolognese Sauce", vegetarian: false },
+            { name: "Caprese Salad", vegetarian: true }
+        ];
+
+        const vegetarianDishes = italianDishes.filter(dish => dish.vegetarian === true);
+
+        console.log(vegetarianDishes);
+
+        const ul = document.querySelector('#menu');
+
+        vegetarianDishes.forEach(dish => {
+            const li = document.createElement('li');
+            li.textContent = dish.name;
+            ul.appendChild(li);
+        });
+
+
+    </script>
+
+</body>
+
+</html>
